@@ -1,0 +1,24 @@
+{
+  "name": "playwrighttestscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:prod" : "cross-env ENVIRON=prod npx playwright test tests/06RunonDiffEnvsUsingUtility.spec.ts --headed --project=chromium",
+    "test:dev"  : "cross-env ENVIRON=dev npx playwright test tests/06RunonDiffEnvsUsingUtility.spec.ts --headed --project=chromium",
+    "test:test" : "cross-env ENVIRON=test npx playwright test tests/06RunonDiffEnvsUsingUtility.spec.ts --headed --project=chromium",
+    "test"      : "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.1",
+    "cross-env": "^10.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
