@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/MariamShaliniJack31/PlaywrightTestScript.git'
+                git branch: 'main', url: 'https://github.com/MariamShaliniJack31/PlaywrightTestScript.git'
             }
         }
 
