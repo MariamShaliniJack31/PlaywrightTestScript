@@ -14,7 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   
-  testMatch: ['01POM.spec.ts', '02CustomPageObjectFixtures.spec.ts', '03FramesusingOptions.spec.ts'] ,
+  testMatch: ['01POM.spec.ts', '02CustomPageObjectFixtures.spec.ts', '03FramesusingOptions.spec.ts', '06RunonDiffEnvsUsingUtility.spec.ts'] ,
 
   /* Run tests in files in parallel */
   fullyParallel: true,
