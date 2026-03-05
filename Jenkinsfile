@@ -1,12 +1,12 @@
 pipeline {
     
-    //agent any
-    agent {
-        docker {
-            image 'mcr.microsoft.com/playwright:v1.58.2-noble'
-            args '-u root'
-        }
-    }
+    agent any
+    // agent {
+    //     docker {
+    //         image 'mcr.microsoft.com/playwright:v1.58.2-noble'
+    //         args '-u root'
+    //     }
+    // }
     environment {
         ENVIRON = "test"
     }
@@ -35,6 +35,11 @@ pipeline {
             steps {
                 bat 'npx playwright test'
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'playwright-report/**'
         }
     }
 }
